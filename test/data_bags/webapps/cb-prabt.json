@@ -1,0 +1,215 @@
+{
+  "id": "cb-prabt",
+  "_default": {
+    "packages": [
+      "curl",
+      "libcurl3",
+      "libcurl3-dev",
+      "unoconv",
+      "imagemagick",
+      "ghostscript",
+      "php5-imagick",
+      "php5-curl",
+      "php5-mysql",
+      "php5-gd",
+      "php5-ldap",
+      "php5-memcache",
+      "php-pear",
+      "php5-dev",
+      "apache2-mpm-prefork"
+    ],
+    "plugin": {
+      "repository": "git@bitbucket.org:globalwidemedia/prabt.git",
+      "revision": "9f12ce35e7099f74b011a045427b435a099c12c5",
+      "name": "cb-prabt"
+    },
+    "servername": "cb-insights.globalwidemedia.com",
+    "serveraliases": [
+      "cb-insights.globalwidemedia.com"
+    ],
+    "allowoverride": [
+      "All"
+    ],
+    "app_db": "test",
+    "mysql": {
+      "username": "root_default",                                                                                                                                                            
+      "password": "yolo_default",
+      "role": "local",
+      "root_passwd": "aRtDB!",
+      "repl_passwd": "aRtr3plicAt3!",
+      "data_dir": "/data",
+      "databases": [
+        "test"
+      ],
+      "test": {
+        "database": "test",
+        "dbaction": "create",
+        "user": "test",
+        "password": "test",
+        "userprivileges": [
+          "all"
+        ],
+        "useraction": "create"
+      }
+    },
+    "ssl": {
+      "cabundle": "/etc/apache2/ssl/cb-prabt.ca-bundle",
+      "sitecert": "/etc/apache2/ssl/cb-prabt.crt",
+      "cacerts": [
+        "essentialsslca_2",
+        "comodoutnsgcca",
+        "utnaddtrustsgcca",
+        "addtrustexternalcaroot"
+      ],
+      "domain": "pulseclick",
+      "sitekey": "/etc/apache2/ssl/pulseclick.key",
+      "enable": "true"
+    },
+    "memcached": {
+      "memory": "512",
+      "maxconn": "1024",
+      "maxobjsize": "1m"
+    }
+  },
+  "alch-stage": {
+    "packages": [
+      "curl",
+      "libcurl3",
+      "libcurl3-dev",
+      "unoconv",
+      "imagemagick",
+      "ghostscript",
+      "php5-imagick",
+      "php5-curl",
+      "php5-mysql",
+      "php5-gd",
+      "php5-ldap",
+      "php5-memcache",
+      "apache2-mpm-prefork",
+      "sendmail",
+      "php-pear",
+      "php5-dev",
+      "php5-imap"
+    ],
+    "plugin": {
+      "repository": "git@bitbucket.org:globalwidemedia/prabt.git",
+      "revision": "880f51203125d4f4515f4ce99b6ec322c50b24ba",
+      "name": "cb-prabt"
+    },
+    "servername": "insights-stage.globalwidemedia.com",
+    "serveraliases": [
+      "insights-stage.globalwidemedia.com"
+    ],
+    "allowoverride": [
+      "All"
+    ],
+    "app_db": "prabt",
+    "mysql": {
+      "role": "prabt-mysql-stage",
+      "root_passwd": "prAbtDB!",
+      "repl_passwd": "prAbtr3plicAt3!",
+      "data_dir": "/data",
+      "databases": [
+        "prabt"
+      ],
+      "prabt": {
+        "database": "prabt",
+        "dbaction": "create",
+        "user": "root",
+        "password": "prAbtDB!",
+        "userprivileges": [
+          "all"
+        ],
+        "useraction": "create"
+      }
+    },
+    "ssl": {
+      "cabundle": "/etc/apache2/ssl/cb-prabt.ca-bundle",
+      "sitecert": "/etc/apache2/ssl/cb-prabt.crt",
+      "cacerts": [
+        "essentialsslca_2",
+        "comodoutnsgcca",
+        "utnaddtrustsgcca",
+        "addtrustexternalcaroot"
+      ],
+      "domain": "pulseclick",
+      "sitekey": "/etc/apache2/ssl/pulseclick.key",
+      "enable": "true"
+    },
+    "memcached": {
+      "memory": "512",
+      "maxconn": "1024",
+      "maxobjsize": "1m"
+    }
+  },
+  "alch-prod": {
+    "packages": [
+      "curl",
+      "libcurl3",
+      "libcurl3-dev",
+      "unoconv",
+      "imagemagick",
+      "ghostscript",
+      "php5-imagick",
+      "php5-curl",
+      "php5-mysql",
+      "php5-gd",
+      "php5-ldap",
+      "php5-memcache",
+      "apache2-mpm-prefork",
+      "sendmail",
+      "php-pear",
+      "php5-imap"
+    ],
+    "plugin": {
+      "repository": "git@bitbucket.org:globalwidemedia/prabt.git",
+      "revision": "458ba090ad2f35db6368c74659a89acf64af5ee3",
+      "name": "cb-prabt"
+    },
+    "servername": "insights.globalwidemedia.com",
+    "serveraliases": [
+      "insights.globalwidemedia.com"
+    ],
+    "allowoverride": [
+      "All"
+    ],
+    "app_db": "prabt",
+    "mysql": {
+      "role": "prabt-mysql-prod",
+      "root_passwd": "prAbtDB!",
+      "repl_passwd": "prAbtr3plicAt3!",
+      "data_dir": "/data",
+      "databases": [
+        "prabt"
+      ],
+      "prabt": {
+        "database": "prabt",
+        "dbaction": "create",
+        "user": "root",
+        "password": "prAbtDB!",
+        "userprivileges": [
+          "all"
+        ],
+        "useraction": "create"
+      }
+    },
+    "ssl": {
+      "cabundle": "/etc/apache2/ssl/cb-prabt.ca-bundle",
+      "sitecert": "/etc/apache2/ssl/cb-prabt.crt",
+      "cacerts": [
+        "essentialsslca_2",
+        "comodoutnsgcca",
+        "utnaddtrustsgcca",
+        "addtrustexternalcaroot"
+      ],
+      "domain": "pulseclick",
+      "sitekey": "/etc/apache2/ssl/pulseclick.key",
+      "enable": "true"
+    },
+    "memcached": {
+      "memory": "512",
+      "maxconn": "1024",
+      "maxobjsize": "1m"
+    }
+  }
+}

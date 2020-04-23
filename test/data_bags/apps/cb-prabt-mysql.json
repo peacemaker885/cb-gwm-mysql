@@ -1,0 +1,56 @@
+{
+  "id": "cb-prabt-mysql",
+  "_default": {
+    "app_db": "test",
+    "mysql": {
+      "username": "root_default",
+      "password": "Yolo_default_!2345",
+      "database": "prabt_default",
+      "role": "prabt-default"
+    }
+  },
+  "alch-stage": {
+    "app_db": "prabt",
+    "mysql": {
+      "role": "prabt-mysql-stage",
+      "root_passwd": "prAbtDB!",
+      "repl_passwd": "prAbtr3plicAt3!",
+      "data_dir": "/data",
+      "databases": [
+        "prabt"
+      ],
+      "prabt": {
+        "database": "prabt",
+        "dbaction": "create",
+        "user": "root",
+        "password": "prAbtDB!",
+        "userprivileges": [
+          "all"
+        ],
+        "useraction": "create"
+      }
+    }
+  },
+  "alch-prod": {
+    "app_db": "prabt",
+    "mysql": {
+      "role": "prabt-mysql-prod",
+      "root_passwd": "prAbtDB!",
+      "repl_passwd": "prAbtr3plicAt3!",
+      "data_dir": "/data",
+      "databases": [
+        "prabt"
+      ],
+      "prabt": {
+        "database": "prabt",
+        "dbaction": "create",
+        "user": "root",
+        "password": "prAbtDB!",
+        "userprivileges": [
+          "all"
+        ],
+        "useraction": "create"
+      }
+    }
+  }
+}
