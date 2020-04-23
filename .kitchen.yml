@@ -10,8 +10,8 @@ platforms:
   - name: ubuntu-16.04
 
 suites:
-  - name: mysql
+  - name: prabt
     data_bags_path: "test/data_bags"
     run_list:
-      - recipe[cb-prabt-mysql::server]
+      - recipe[cb-prabt-mysql::prabt]
     attributes:
