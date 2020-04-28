@@ -28,6 +28,14 @@ mysql_config 'prabt' do
   action :create
 end
 
+mysql_config 'prabt' do                                                                                                                                                                      
+  instance 'prabt'                                                                                                                                                                           
+  source 'ldap2020.erb'                                                                                                                                                                     
+  config_name 'ldap2020'
+  notifies :restart, 'mysql_service[prabt]'                                                                                                                                                  
+  action :create                                                                                                                                                                             
+end
+
 # MySQL commands to replade database cookbook
 execute 'create_database' do
     command "mysql -u root -p#{node['prabt']['mysql_root_password']} -h 127.0.0.1 -e 'create database if not exists #{mysql[node.chef_environment]['mysql']['prabt']['database']}'"
