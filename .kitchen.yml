@@ -13,5 +13,5 @@ suites:
   - name: prabt
     data_bags_path: "test/data_bags"
     run_list:
-      - recipe[cb-prabt-mysql::prabt]
+      - recipe[cb-gwm-mysql::prabt]
     attributes:

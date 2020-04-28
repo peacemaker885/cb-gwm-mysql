@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: cb-prabt-mysql
+# Cookbook Name:: cb-gwm-mysql
 # Recipe:: default
 #
 # Copyright 2020, YOUR_COMPANY_NAME
